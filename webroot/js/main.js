@@ -49,8 +49,7 @@ export function setErrorData(errorLog) {
   const zygote64_div = document.getElementById('zygote64')
   const zygote32_div = document.getElementById('zygote32')
 
-  const daemon64_div = document.getElementById('daemon64')
-  const daemon32_div = document.getElementById('daemon32')
+  const monitor_status = document.getElementById('monitor_status')
 
   const zygote32_status_div = document.getElementById('zygote32_status')
   const zygote64_status_div = document.getElementById('zygote64_status')
@@ -69,12 +68,10 @@ export function setErrorData(errorLog) {
 
   if (!has64BitSupport) {
     zygote64_div.style.display = 'none'
-    daemon64_div.style.display = 'none'
   }
 
   if (!has32BitSupport) {
     zygote32_div.style.display = 'none'
-    daemon32_div.style.display = 'none'
   }
 
   const catCmd = await exec('/system/bin/cat /data/adb/rezygisk/status')
@@ -82,10 +79,18 @@ export function setErrorData(errorLog) {
   if (catCmd.errno === 0) {
     const [ Version, Tracing, Daemon64, Zygote64 ] = catCmd.stdout.split('\n')
     let hasOffset = false
-    /* TODO: Show the tracing state */
     /* TODO: Show if daemon is running */
 
     code_version.innerHTML = Version.split(': ')[1]
+
+    const tracingState = Tracing.split(': ')[1].split(' ')[0]
+    switch (tracingState) {
+      case '1': monitor_status.innerHTML = translations.page.actions.status.tracing; break;
+      case '2': monitor_status.innerHTML = translations.page.actions.status.stopping; break;
+      case '3': monitor_status.innerHTML = translations.page.actions.status.stopped; break;
+      case '4': monitor_status.innerHTML = translations.page.actions.status.exiting; break;
+      default: monitor_status.innerHTML = translations.page.actions.status.unknown;
+    }
 
     if (has64BitSupport && Daemon64 && Daemon64.startsWith('Daemon64:')) {
       hasOffset = true
@@ -107,11 +112,19 @@ export function setErrorData(errorLog) {
       /* TODO: add handling for unknown status */
       if (zygote64_injection_status === 'injected') {
         zygote64_status_div.innerHTML = translations.page.home.info.zygote.injected
-      } else {
+      } else if (zygote64_injection_status === 'not injected') {
         zygote64_status_div.innerHTML = translations.page.home.info.zygote.notInjected
 
         zygote64_status = UNEXPECTED_FAIL
+      } else {
+        zygote64_status_div.innerHTML = translations.page.home.info.zygote.unknown
+
+        zygote64_status = UNEXPECTED_FAIL
       }
+    } else if (has64BitSupport && (!Daemon64 || !Daemon64.startsWith('Daemon64:'))) {
+      zygote64_div.style.display = 'none'
+
+      zygote64_status = UNEXPECTED_FAIL
     }
 
     if (has32BitSupport) {
@@ -144,14 +157,17 @@ export function setErrorData(errorLog) {
 
         if (zygote32_injection_status === 'injected') {
           zygote32_status_div.innerHTML = translations.page.home.info.zygote.injected
-        } else {
+        } else if (zygote32_injection_status === 'not injected') {
           zygote32_status_div.innerHTML = translations.page.home.info.zygote.notInjected
+
+          zygote32_status = UNEXPECTED_FAIL
+        } else {
+          zygote32_status_div.innerHTML = translations.page.home.info.zygote.unknown
 
           zygote32_status = UNEXPECTED_FAIL
         }
       } else {
         zygote32_div.style.display = 'none'
-        daemon32_div.style.display = 'none'
 
         zygote32_status = UNEXPECTED_FAIL
       }

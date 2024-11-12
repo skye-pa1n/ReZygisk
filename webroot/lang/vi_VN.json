@@ -15,11 +15,11 @@
     },
     "errorh": {
       "buttons": {
-        "copy": "SAO CHÉP",
-        "clear": "XOÁ TOÀN BỘ LOG"
+        "copy": "COPY",
+        "clear": "CLEAR ALL LOGS"
       },
-      "header": "Lịch sử lỗi",
-      "placeholder": "Không có lỗi nào đã được ghi lại ở đây!"
+      "header": "Error History",
+      "placeholder": "No error log recorded here!"
     }
   },
   "page": {
@@ -46,21 +46,20 @@
       "notAvaliable": "Không có mô-đun nào sử dụng Zygisk ở đây!",
       "arch": "Cấu trúc: "
     },
-    "action": {
+    "actions": {
       "header": "Trình điều khiển",
-      "daemonButton": {
+      "monitorButton": {
         "start": "Chạy",
         "stop": "Dừng",
         "pause": "Tạm Dừng"
       },
-      "monitor": {
-        "32": "Trình chạy (32 bit)",
-        "64": "Trình chạy (64 bit)"
-      },
+      "monitor": "Trình chạy",
       "status": {
-        "unknown": "Không xác định",
-        "notWorking": "Không hoạt động",
-        "ok": "Đang hoạt động"
+        "tracing": "Tracing",
+        "stopping": "Stopping",
+        "stopped": "Stopped",
+        "exiting": "Exiting",
+        "unknown": "Unknown"
       }
     },
     "settings": {
