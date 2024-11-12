@@ -33,7 +33,7 @@ export async function setNewLanguage(locate, initialize) {
   /* INFO: Error history small page */
   document.getElementById('errorh_copy').innerHTML = new_translations.smallPage.errorh.buttons.copy
   document.getElementById('errorh_clear_all').innerHTML = new_translations.smallPage.errorh.buttons.clear
-  document.getElementById('errorh_modal_title').innerHTML = new_translations.smallPage.errorh.header
+  document.getElementById('small_panel_errorh_title').innerHTML = new_translations.smallPage.errorh.header
   document.getElementById('errorh_panel').placeholder = new_translations.smallPage.errorh.placeholder
 }
 
