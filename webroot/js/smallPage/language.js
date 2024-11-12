@@ -10,20 +10,17 @@ let index = 0
 
 async function setAvailableLanguage() {
   const availableLanguages = await getAvailableLanguages()
-  const langKey = availableLanguages[index]
 
-  index += 1
+  for (index; index < availableLanguages.length; index++) {
+    const langCode = availableLanguages[index]
+    const langData = await getTranslations(langCode)
 
-  getTranslations(langKey).then((data) => {
     document.getElementById('lang_modal_list').innerHTML += `
-    <div lang-data="${langKey}" class="dim card card_animation" style="padding: 25px 15px; cursor: pointer;">
-      <div lang-data="${langKey}" class="dimc" style="font-size: 1.1em;">${data.langName}</div>
+    <div lang-data="${langCode}" class="dim card card_animation" style="padding: 25px 15px; cursor: pointer;">
+      <div lang-data="${langCode}" class="dimc" style="font-size: 1.1em;">${langData.langName}</div>
     </div>
     `
-  })
-  .finally(() => { 
-    if (index !== avaliableLanguages.length) setAvailableLanguage() 
-  })
+  }
 }
 setAvailableLanguage()
 
