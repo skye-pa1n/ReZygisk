@@ -15,11 +15,11 @@
     },
     "errorh": {
       "buttons": {
-        "copy": "COPY",
-        "clear": "CLEAR ALL LOGS"
+        "copy": "SAO CHÉP",
+        "clear": "XOÁ TOÀN BỘ LOGS"
       },
-      "header": "Error History",
-      "placeholder": "No error log recorded here!"
+      "header": "Lịch Sử Lỗi",
+      "placeholder": "Không có lỗi nào được ghi ở đây!"
     }
   },
   "page": {
@@ -53,13 +53,13 @@
         "stop": "Dừng",
         "pause": "Tạm Dừng"
       },
-      "monitor": "Trình chạy",
+      "monitor": "Trình theo dõi",
       "status": {
-        "tracing": "Tracing",
-        "stopping": "Stopping",
-        "stopped": "Stopped",
-        "exiting": "Exiting",
-        "unknown": "Unknown"
+        "tracing": "Đang chạy",
+        "stopping": "Đang Dừng",
+        "stopped": "Đã Dừng",
+        "exiting": "Đã Thoát",
+        "unknown": "Không Xác Định"
       }
     },
     "settings": {
