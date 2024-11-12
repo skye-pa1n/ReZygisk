@@ -84,10 +84,10 @@ export function setErrorData(errorLog) {
         if (modules[0] !== 'None') modules_64.push(...modules)
       }
 
-      const zygote64_status = Zygote64.split(': ')[1]
+      const zygote64_injection_status = Zygote64.split(': ')[1]
 
       /* TODO: add handling for unknown status */
-      if (zygote64_status === 'injected') {
+      if (zygote64_injection_status === 'injected') {
         zygote64_status_div.innerHTML = translations.page.home.info.zygote.injected
       } else {
         zygote64_status_div.innerHTML = translations.page.home.info.zygote.notInjected
@@ -110,9 +110,9 @@ export function setErrorData(errorLog) {
           if (modules[0] !== 'None') modules_32.push(...modules)
         }
 
-        const zygote32_status = Zygote32.split(': ')[1]
+        const zygote32_injection_status = Zygote32.split(': ')[1]
 
-        if (zygote32_status === 'injected') {
+        if (zygote32_injection_status === 'injected') {
           zygote32_status_div.innerHTML = translations.page.home.info.zygote.injected
         } else {
           zygote32_status_div.innerHTML = translations.page.home.info.zygote.notInjected
@@ -148,9 +148,9 @@ export function setErrorData(errorLog) {
           if (modules[0] !== 'None') modules_32.push(...modules)
         }
 
-        const zygote32_status = Zygote32.split(': ')[1]
+        const zygote32_injection_status = Zygote32.split(': ')[1]
 
-        if (zygote32_status === 'injected') {
+        if (zygote32_injection_status === 'injected') {
           zygote32_status_div.innerHTML = translations.page.home.info.zygote.injected
         } else {
           zygote32_status_div.innerHTML = translations.page.home.info.zygote.notInjected
