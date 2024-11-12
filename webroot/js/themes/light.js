@@ -12,6 +12,7 @@ const close_icons = document.getElementsByClassName('close_icon')
 const expand_icons = document.getElementsByClassName('expander')
 const sp_lang_close = document.getElementById('sp_lang_close')
 const sp_theme_close = document.getElementById('sp_theme_close')
+const sp_errorh_close = document.getElementById('sp_errorh_close')
 
 export function setLight(chooseSet) {
   rootCss.style.setProperty('--background', '#f2f2f2')
@@ -36,6 +37,7 @@ export function setLight(chooseSet) {
 
   sp_lang_close.innerHTML = light_page_exit_icon
   sp_theme_close.innerHTML = light_page_exit_icon
+  sp_errorh_close.innerHTML = light_page_exit_icon
   setLightNav()
 }
 

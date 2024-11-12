@@ -7,6 +7,7 @@ const close_icons = document.getElementsByClassName('close_icon')
 const expand_icons = document.getElementsByClassName('expander')
 const sp_lang_close = document.getElementById('sp_lang_close')
 const sp_theme_close = document.getElementById('sp_theme_close')
+const sp_errorh_close = document.getElementById('sp_errorh_close')
 
 export function setDark(chooseSet) {
   rootCss.style.setProperty('--background', '#181c20')
@@ -31,6 +32,7 @@ export function setDark(chooseSet) {
 
   sp_lang_close.innerHTML = '<img src="./assets/back.svg"/>'
   sp_theme_close.innerHTML = '<img src="./assets/back.svg"/>'
+  sp_errorh_close.innerHTML = '<img src="./assets/back.svg"/>'
   setDarkNav()
 }
 
