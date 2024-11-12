@@ -15,11 +15,6 @@ export async function setNewLanguage(locate, initialize) {
   translateActionPage(old_translations, new_translations)
   translateSettingsPage(new_translations)
 
-
-  /* INFO: error history modal */
-  document.getElementById('errorh_modal_title').innerHTML = new_translations.modal.logs.header
-  document.getElementById('errorh_panel').placeholder = new_translations.modal.logs.placeholder
-
   /* INFO: navbar info */
   document.getElementById('nav_home_title').innerHTML = new_translations.page.home.header
   document.getElementById('nav_modules_title').innerHTML = new_translations.page.modules.header
@@ -34,6 +29,12 @@ export async function setNewLanguage(locate, initialize) {
   document.getElementById('small_panel_theme_dark_option').innerHTML = new_translations.smallPage.theme.dark
   document.getElementById('small_panel_theme_light_option').innerHTML = new_translations.smallPage.theme.light
   document.getElementById('small_panel_theme_system_option').innerHTML = new_translations.smallPage.theme.system
+
+  /* INFO: Error history small page */
+  document.getElementById('errorh_copy').innerHTML = new_translations.smallPage.errorh.buttons.copy
+  document.getElementById('errorh_clear_all').innerHTML = new_translations.smallPage.errorh.buttons.clear
+  document.getElementById('errorh_modal_title').innerHTML = new_translations.smallPage.errorh.header
+  document.getElementById('errorh_panel').placeholder = new_translations.smallPage.errorh.placeholder
 }
 
 export async function getTranslations(locate) {

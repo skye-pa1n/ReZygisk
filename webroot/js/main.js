@@ -36,6 +36,7 @@ export function setErrorData(errorLog) {
   const translations = await getTranslations(sys_lang)
 
   const loading_screen = document.getElementById('loading_screen')
+  const bottom_nav = document.getElementById('navbar_support_div')
 
   const rootCss = document.querySelector(':root')
 
@@ -204,6 +205,7 @@ export function setErrorData(errorLog) {
 
   /* INFO: This hides the throbber screen */
   loading_screen.style.display = 'none'
+  bottom_nav.style.display = 'flex'
 
   all_modules.forEach((module) => {
     modules_list.innerHTML += 

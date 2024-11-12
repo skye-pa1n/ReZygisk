@@ -14,7 +14,7 @@
   /* Locked Color */
   --lock-desc: #c9c9c9;
   --lock: #fff;
-  --font-family: 'Outfit', sans-serif;
+  --font-family: 'Poppins', sans-serif;
 }
 
 * {
@@ -231,15 +231,44 @@ a {
 }
 
 .errorh_textarea {
-  field-sizing: content;
   resize: none; 
-  height: 100%;
-  width: 100%;
   border: none;
   outline: none;
   font-size: 14px;
   padding-bottom: 25px;
   font-family: monospace, monospace;
+  position: fixed;
+  bottom: 7em;
+  top: 15.2em;
+  left: 1em;
+  right: 1em;
+}
+
+.errorh_button_container {
+  position: fixed;
+  top: 5.75em;
+  left: 1em;
+  right: 1em;
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 1em;
+}
+
+.errorh_button {
+  border-radius: 25px;
+  background: var(--small-card);
+  display: flex;
+  padding: 0.7em;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
+  cursor: pointer;
+  transition: transform 0.05s ease-in-out;
+  user-select: none;
+}
+
+.errorh_button:active {
+  transform: scale(80%) 
 }
 
 /* Card type */
@@ -351,6 +380,13 @@ input:checked + .slider:before {
   animation: fade-in 0.2s;
 }
 
+.panel.showback {
+  margin-bottom: 119px;
+  display: block;
+  animation: fade-in 0.2s;
+  z-index: 30;
+}
+
 .navicon.show {
   width: 65px;
   animation: openNav 0.15s;
@@ -387,6 +423,15 @@ input:checked + .slider:before {
   }
   .nav_dimc {
     background: var(--desktop-navbar);
+  }
+  .errorh_button_container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .errorh_textarea {
+    top: 11em;
+  }
+  .errorh_button {
+    margin-bottom: 0;
   }
 }
 

@@ -3,12 +3,6 @@
   "global": {
     "unknown": "Necunoscut"
   },
-  "modal": {
-    "logs": {
-      "header": "Jurnal erori",
-      "placeholder": "Nu a fost înregistrat niciun jurnal de erori aici!"
-    }
-  },
   "smallPage": {
     "language": {
       "header": "Alege limba implicită"
@@ -18,6 +12,14 @@
       "dark": "Întunecată",
       "light": "Luminoasă",
       "system": "Bazată pe sistem"
+    },
+    "errorh": {
+      "buttons": {
+        "copy": "COPY",
+        "clear": "CLEAR ALL LOGS"
+      },
+      "header": "Jurnal erori",
+      "placeholder": "Nu a fost înregistrat niciun jurnal de erori aici!"
     }
   },
   "page": {

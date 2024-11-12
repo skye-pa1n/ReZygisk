@@ -3,12 +3,6 @@
   "global": {
     "unknown": "Không xác định"
   },
-  "modal": {
-    "logs": {
-      "header": "Lịch sử lỗi",
-      "placeholder": "Không có lỗi nào đã được ghi lại ở đây!"
-    }
-  },
   "smallPage": {
     "language": {
       "header": "Chọn ngôn ngữ mới của bạn"
@@ -18,6 +12,14 @@
       "dark": "Tối",
       "light": "Sáng",
       "system": "Theo hệ thống"
+    },
+    "errorh": {
+      "buttons": {
+        "copy": "SAO CHÉP",
+        "clear": "XOÁ TOÀN BỘ LOG"
+      },
+      "header": "Lịch sử lỗi",
+      "placeholder": "Không có lỗi nào đã được ghi lại ở đây!"
     }
   },
   "page": {

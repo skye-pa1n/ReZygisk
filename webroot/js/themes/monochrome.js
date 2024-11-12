@@ -5,8 +5,6 @@ const rootCss = document.querySelector(':root')
 /* INFO: Changes the icons to match the theme */
 const close_icons = document.getElementsByClassName('close_icon')
 const expand_icons = document.getElementsByClassName('expander')
-const copy_button = document.getElementById('errorh_copy')
-const clearall_button = document.getElementById('errorh_clear_all')
 const sp_lang_close = document.getElementById('sp_lang_close')
 const sp_theme_close = document.getElementById('sp_theme_close')
 
@@ -31,8 +29,6 @@ export function setMonochrome(chooseSet) {
     expand_icon.innerHTML = '<img class="dimc" src="assets/expand.svg">'
   }
 
-  copy_button.innerHTML = '<img src="assets/content.svg">'
-  clearall_button.innerHTML = '<img src="assets/delete.svg">'
   sp_lang_close.innerHTML = '<img src="./assets/back.svg"/>'
   sp_theme_close.innerHTML = '<img src="./assets/back.svg"/>'
   setDarkNav()

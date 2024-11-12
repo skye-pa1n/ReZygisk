@@ -18,6 +18,14 @@
       "dark": "Темная",
       "light": "Светлая",
       "system": "Системная тема"
+    },
+    "errorh": {
+      "buttons": {
+        "copy": "COPY",
+        "clear": "CLEAR ALL LOGS"
+      },
+      "header": "Журнал ошибок",
+      "placeholder": "Журнал ошибок пуст!"
     }
   },
   "page": {

@@ -139,10 +139,9 @@ extract "$ZIPFILE" 'webroot/js/themes/lightNavbar.js' "$MODPATH/webroot/js/theme
 extract "$ZIPFILE" 'webroot/js/themes/lightIcon.js' "$MODPATH/webroot/js/themes" true
 extract "$ZIPFILE" 'webroot/js/themes/monochrome.js' "$MODPATH/webroot/js/themes" true
 
-extract "$ZIPFILE" 'webroot/js/modal/errorHistory.js' "$MODPATH/webroot/js/modal" true
-
 extract "$ZIPFILE" 'webroot/js/smallPage/language.js' "$MODPATH/webroot/js/smallPage" true
 extract "$ZIPFILE" 'webroot/js/smallPage/theme.js' "$MODPATH/webroot/js/smallPage" true
+extract "$ZIPFILE" 'webroot/js/smallPage/errorHistory.js' "$MODPATH/webroot/js/smallPage" true
 
 extract "$ZIPFILE" 'webroot/js/switcher/fontChanger.js' "$MODPATH/webroot/js/switcher" true
 
@@ -150,8 +149,8 @@ extract "$ZIPFILE" 'webroot/css/index.css' "$MODPATH/webroot/css" true
 extract "$ZIPFILE" 'webroot/css/icons.css' "$MODPATH/webroot/css" true
 extract "$ZIPFILE" 'webroot/css/error.css' "$MODPATH/webroot/css" true
 
-extract "$ZIPFILE" 'webroot/fonts/font.ttf' "$MODPATH/webroot/fonts" true
-extract "$ZIPFILE" 'webroot/fonts/outfit.css' "$MODPATH/webroot/fonts" true
+extract "$ZIPFILE" 'webroot/fonts/poppins.ttf' "$MODPATH/webroot/fonts" true
+extract "$ZIPFILE" 'webroot/fonts/header.css' "$MODPATH/webroot/fonts" true
 
 for lang in en_US ja_JP pt_BR ro_RO ru_RU vi_VN zh_CN zh_TW; do
   extract "$ZIPFILE" "webroot/lang/${lang}.json" "$MODPATH/webroot/lang" true

@@ -3,12 +3,6 @@
   "global": {
     "unknown": "Desconhecido"
   },
-  "modal": {
-    "logs": {
-      "header": "Histórico de erros",
-      "placeholder": "Nenhum erro foi salvo aqui!"
-    }
-  },
   "smallPage": {
     "language": {
       "header": "Escolha sua nova língua"
@@ -18,6 +12,14 @@
       "dark": "Escuro",
       "light": "Claro",
       "system": "Baseado no do sistema"
+    },
+    "errorh": {
+      "buttons": {
+        "copy": "COPY",
+        "clear": "CLEAR ALL LOGS"
+      },
+      "header": "Histórico de erros",
+      "placeholder": "Nenhum erro foi salvo aqui!"
     }
   },
   "page": {

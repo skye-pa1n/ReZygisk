@@ -1,4 +1,4 @@
-export function smallPageDisabler(page_name, new_page) {
+export function smallPageDisabler(page_name, new_page, custom_page) {
   const navbar_data_tag = document.getElementById('cache-navbar-previous')
   const small_panel_data_tag = document.getElementById('cache-page-small-previous')
 
@@ -22,5 +22,5 @@ export function smallPageDisabler(page_name, new_page) {
   curr_input.setAttribute('checked', '')
   i_background.classList.toggle('show')
 
-  navbar_data_tag.setAttribute('content', 'settings')
+  navbar_data_tag.setAttribute('content', custom_page ? custom_page : 'settings')
 }

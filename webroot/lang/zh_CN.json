@@ -3,12 +3,6 @@
   "global": {
     "unknown": "未知"
   },
-  "modal": {
-    "logs": {
-      "header": "错误日志",
-      "placeholder": "暂时没有错误日志"
-    }
-  },
   "smallPage": {
     "language": {
       "header": "选择语言"
@@ -18,6 +12,14 @@
       "dark": "暗色",
       "light": "浅色",
       "system": "跟随系统设置"
+    },
+    "errorh": {
+      "buttons": {
+        "copy": "COPY",
+        "clear": "CLEAR ALL LOGS"
+      },
+      "header": "错误日志",
+      "placeholder": "暂时没有错误日志"
     }
   },
   "page": {

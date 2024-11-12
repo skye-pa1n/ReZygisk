@@ -7,9 +7,9 @@
 
     <meta id="cache-navbar-previous" />
     <meta id="cache-page-small-previous" />
-    <meta id="cache-modal-error-history-state" />
+    <meta id="cache-fallback-open" />
 
-    <link rel="stylesheet" href="fonts/outfit.css">
+    <link rel="stylesheet" href="fonts/header.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/error.css">
     <link rel="stylesheet" href="css/icons.css">
@@ -18,12 +18,12 @@
     <script src="js/errorScreen.js" type="module"></script>
     <script src="js/browserRedirect.js" type="module"></script>
     <script src="js/smallPage/theme.js" type="module"></script>
+    <script src="js/smallPage/language.js" type="module"></script>
+    <script src="js/smallPage/errorHistory.js" type="module"></script>
     <script src="js/restoreError.js" type="module"></script>
     <script src="js/navbar.js" type="module"></script>
     <script src="js/daemonActions.js" type="module"></script>
     <script src="js/switcher/fontChanger.js" type="module"></script>
-    <script src="js/smallPage/language.js" type="module"></script>
-    <script src="js/modal/errorHistory.js" type="module"></script>
     <script src="js/main.js" type="module"></script>
   </head>
   <body id="main_body">
@@ -51,30 +51,6 @@
     <!-- INFO: Loading screen -->
     <div id="loading_screen" class="load_screen">
       <div id="backport_errorh" class="loader"></div>
-    </div>
-
-    <!-- INFO: Error History Modal -->
-    <div id="errorh_modal" class="full_screen" style="top: 100%;">
-      <div class="liste" style="margin-top: 20px; margin-left: 20px;">
-        <div style="margin-left: 20px;"></div>
-        <div id="errorh_modal_close" class="close_icon icon_animation" style="margin-right: 20px; width: 40px; height: 40px;">
-          <img src="assets/close.svg">
-        </div>
-      </div>
-      <div style="margin: 0 25px 0 25px; display: flex; align-items: center; justify-content: space-between;">
-        <h1 id="errorh_modal_title">Error History</h1>
-        <div style="display: flex; align-items: center;">
-          <div class="icon_animation" id="errorh_copy">
-            <img src="assets/content.svg">
-          </div>
-          <div class="icon_animation" id="errorh_clear_all">
-            <img src="assets/delete.svg">
-          </div>
-        </div>  
-      </div>
-      <div style="margin-left: 25px; margin-right: 25px; height: fit-content;">
-        <textarea id="errorh_panel" class="errorh_textarea" placeholder="No error log recorded here!" disabled></textarea>
-      </div>
     </div>
 
     <!-- INFO: Home page -->
@@ -209,7 +185,7 @@
       </div>
 
       <!-- INFO: Error history -->
-      <div id="rezygisk_errorh" class="small_card dimc card_animation" style="margin-top: 15px; justify-content: space-between; display: flex; align-items: center;">
+      <div id="errorh_page_toggle" class="small_card dimc card_animation" style="margin-top: 15px; justify-content: space-between; display: flex; align-items: center;">
         <div class="dimc" style="display: inline-block;">
           <div id="sys_errorh_title" class="dimc content" style="font-size: 1.1em; padding-left: 5px; padding-top: 6px; padding-bottom: 2px;">
             Error History
@@ -306,9 +282,27 @@
         <!-- N/A -->
       </div>
     </div>
-    
+
+    <!-- INFO: Error small page -->
+    <div id="small_panel_errorh" class="panel">
+      <div class="header" style="padding-left: 20px; display: flex; align-items: center; justify-content: initial;">
+        <div id="sp_errorh_close" style="width: 36px; height: 36px; margin-right: 6px;">
+          <img src="./assets/back.svg"/>
+        </div>
+        <div id="small_panel_errorh_title">Error History</div>
+      </div>
+      <div style="display: block; height: 100%;">
+        <div class="errorh_button_container">
+          <div id="errorh_copy" class="errorh_button">COPY</div>
+          <div id="errorh_clear_all" class="errorh_button">CLEAR ALL LOG</div>
+        </div>
+        <textarea id="errorh_panel" class="errorh_textarea" placeholder="No error log recorded here!" disabled></textarea>
+      </div>
+    </div>
+        
+
     <!-- INFO: Bottom navbar -->
-    <div id="navbar_support_div">
+    <div id="navbar_support_div" style="display: none;">
       <div id="navbar" class="navbar radios">
         <div class="navicon_support nav_dimc">
           <input id="n_home" type="radio" name="navbutton" value="home" checked/>

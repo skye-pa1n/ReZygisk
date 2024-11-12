@@ -201,15 +201,14 @@ androidComponents.onVariants { variant ->
 
                     set.add(Pair(root.file("webroot/js/smallPage/language.js").asFile, null))
                     set.add(Pair(root.file("webroot/js/smallPage/theme.js").asFile, null))
-
-                    set.add(Pair(root.file("webroot/js/modal/errorHistory.js").asFile, null))
+                    set.add(Pair(root.file("webroot/js/smallPage/errorHistory.js").asFile, null))
 
                     set.add(Pair(root.file("webroot/css/index.css").asFile, null))
                     set.add(Pair(root.file("webroot/css/icons.css").asFile, null))
                     set.add(Pair(root.file("webroot/css/error.css").asFile, null))
 
-                    set.add(Pair(root.file("webroot/fonts/font.ttf").asFile, null))
-                    set.add(Pair(root.file("webroot/fonts/outfit.css").asFile, null))
+                    set.add(Pair(root.file("webroot/fonts/poppins.ttf").asFile, null))
+                    set.add(Pair(root.file("webroot/fonts/header.css").asFile, null))
                     
                     set.add(Pair(root.file("webroot/assets/mark.svg").asFile, null))
                     set.add(Pair(root.file("webroot/assets/tick.svg").asFile, null))

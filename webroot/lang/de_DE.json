@@ -3,12 +3,6 @@
   "global": {
     "unknown": "Unbekannt"
   },
-  "modal": {
-    "logs": {
-      "header": "Fehlerhistorie",
-      "placeholder": "Es wurde kein Fehler festgestellt!"
-    }
-  },
   "smallPage": {
     "language": {
       "header": "Neue Sprache wählen"
@@ -18,6 +12,14 @@
       "dark": "Dunkel",
       "light": "Hell",
       "system": "System Basiert"
+    },
+    "errorh": {
+      "buttons": {
+        "copy": "COPY",
+        "clear": "CLEAR ALL LOGS"
+      },
+      "header": "Fehlerhistorie",
+      "placeholder": "Es wurde kein Fehler festgestellt!"
     }
   },
   "page": {

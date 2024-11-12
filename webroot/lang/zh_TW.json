@@ -18,6 +18,14 @@
       "dark": "Dark",
       "light": "Light",
       "system": "System Based"
+    },
+    "errorh": {
+      "buttons": {
+        "copy": "COPY",
+        "clear": "CLEAR ALL LOGS"
+      },
+      "header": "Error History",
+      "placeholder": "No error log recorded here!"
     }
   },
   "page": {
