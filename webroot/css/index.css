@@ -267,6 +267,13 @@ a {
   user-select: none;
 }
 
+#errorh_small_panel_header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
 .errorh_button:active {
   transform: scale(80%) 
 }
