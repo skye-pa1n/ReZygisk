@@ -1,8 +1,6 @@
 import { 
   light_close_icon,
   light_expand_icon,
-  light_copy_icon,
-  light_clear_icon,
   light_page_exit_icon,
 } from './lightIcon.js'
 import { setLightNav } from './lightNavbar.js'
@@ -12,8 +10,6 @@ const rootCss = document.querySelector(':root')
 /* INFO: Changes the icons to match the theme */
 const close_icons = document.getElementsByClassName('close_icon')
 const expand_icons = document.getElementsByClassName('expander')
-const copy_button = document.getElementById('errorh_copy')
-const clearall_button = document.getElementById('errorh_clear_all')
 const sp_lang_close = document.getElementById('sp_lang_close')
 const sp_theme_close = document.getElementById('sp_theme_close')
 
@@ -38,8 +34,6 @@ export function setLight(chooseSet) {
     expand_icon.innerHTML = light_expand_icon
   }
 
-  copy_button.innerHTML = light_copy_icon
-  clearall_button.innerHTML = light_clear_icon
   sp_lang_close.innerHTML = light_page_exit_icon
   sp_theme_close.innerHTML = light_page_exit_icon
   setLightNav()
