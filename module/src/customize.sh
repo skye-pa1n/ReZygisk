@@ -120,14 +120,14 @@ extract "$ZIPFILE" 'webroot/js/kernelsu.js' "$MODPATH/webroot/js" true
 extract "$ZIPFILE" 'webroot/js/language.js' "$MODPATH/webroot/js" true
 extract "$ZIPFILE" 'webroot/js/navbar.js' "$MODPATH/webroot/js" true
 extract "$ZIPFILE" 'webroot/js/restoreError.js' "$MODPATH/webroot/js" true
-extract "$ZIPFILE" 'webroot/js/daemonActions.js' "$MODPATH/webroot/js" true
+extract "$ZIPFILE" 'webroot/js/monitorActions.js' "$MODPATH/webroot/js" true
 extract "$ZIPFILE" 'webroot/js/errorCatcher.js' "$MODPATH/webroot/js" true
 extract "$ZIPFILE" 'webroot/js/browserRedirect.js' "$MODPATH/webroot/js" true
 extract "$ZIPFILE" 'webroot/js/errorScreen.js' "$MODPATH/webroot/js" true
 extract "$ZIPFILE" 'webroot/js/smallPageDesabler.js' "$MODPATH/webroot/js" true
 
 extract "$ZIPFILE" 'webroot/js/translate/home.js' "$MODPATH/webroot/js/translate" true
-extract "$ZIPFILE" 'webroot/js/translate/action.js' "$MODPATH/webroot/js/translate" true
+extract "$ZIPFILE" 'webroot/js/translate/actions.js' "$MODPATH/webroot/js/translate" true
 extract "$ZIPFILE" 'webroot/js/translate/modules.js' "$MODPATH/webroot/js/translate" true
 extract "$ZIPFILE" 'webroot/js/translate/settings.js' "$MODPATH/webroot/js/translate" true
 
