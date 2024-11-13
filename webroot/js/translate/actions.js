@@ -1,4 +1,4 @@
-export function translateActionPage(old_translations, new_translations) {
+export function translateActionsPage(old_translations, new_translations) {
   /* INFO: actions card */
   document.getElementById('panel_actions_header').innerHTML = new_translations.page.actions.header
 

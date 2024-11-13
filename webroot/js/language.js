@@ -1,7 +1,7 @@
-import { fullScreen, exec, toast } from './kernelsu.js'
+import { exec } from './kernelsu.js'
 
 import { setError } from './main.js'
-import { translateActionPage } from './translate/action.js'
+import { translateActionsPage } from './translate/actions.js'
 import { translateHomePage } from './translate/home.js'
 import { translateModulesPage } from './translate/modules.js'
 import { translateSettingsPage } from './translate/settings.js'
@@ -12,13 +12,13 @@ export async function setNewLanguage(locate, initialize) {
 
   translateHomePage(old_translations, new_translations)
   translateModulesPage(new_translations)
-  translateActionPage(old_translations, new_translations)
+  translateActionsPage(old_translations, new_translations)
   translateSettingsPage(new_translations)
 
   /* INFO: navbar info */
   document.getElementById('nav_home_title').innerHTML = new_translations.page.home.header
   document.getElementById('nav_modules_title').innerHTML = new_translations.page.modules.header
-  document.getElementById('nav_actions_title').innerHTML = new_translations.page.action.header
+  document.getElementById('nav_actions_title').innerHTML = new_translations.page.actions.header
   document.getElementById('nav_settings_title').innerHTML = new_translations.page.settings.header
 
   /* INFO: Language small page */
