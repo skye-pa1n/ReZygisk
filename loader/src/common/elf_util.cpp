@@ -179,11 +179,42 @@ ElfW(Addr) ElfImg::LinearLookup(std::string_view name) const {
             }
         }
     }
+
     if (auto i = symtabs_.find(name); i != symtabs_.end()) {
         return i->second->st_value;
     } else {
         return 0;
     }
+}
+
+/* INFO: This expects it to only have one find. This is done as
+           we only need for that and further complexity to add
+           support for more than one find is bad (for us). 
+*/
+std::string_view ElfImg::LinearLookupByPrefix(std::string_view name) const {
+    if (symtabs_.empty()) {
+        symtabs_.reserve(symtab_count);
+        if (symtab_start != nullptr && symstr_offset_for_symtab != 0) {
+            for (ElfW(Off) i = 0; i < symtab_count; i++) {
+                unsigned int st_type = ELF_ST_TYPE(symtab_start[i].st_info);
+                const char *st_name = offsetOf<const char *>(header, symstr_offset_for_symtab +
+                                                                     symtab_start[i].st_name);
+                if ((st_type == STT_FUNC || st_type == STT_OBJECT) && symtab_start[i].st_size) {
+                    symtabs_.emplace(st_name, &symtab_start[i]);
+                }
+            }
+        }
+    }
+
+    for (auto symtab : symtabs_) {
+        if (symtab.first.size() < name.size()) continue;
+
+        if (symtab.first.substr(0, name.size()) == name) {
+            return symtab.first;
+        }
+    }
+
+    return "";
 }
 
 
