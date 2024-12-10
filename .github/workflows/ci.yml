@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ add/new-webui ]
 
   pull_request:
   merge_group:
